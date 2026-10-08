@@ -35,7 +35,7 @@ public final class KarasTreatItem extends Item {
         long gameTime = cat.level().getGameTime();
         if (strayCat) {
             cat.tame(player);
-            CatCareStats stats = CatCareStats.fresh(gameTime);
+            CatCareStats stats = CatCareStats.fresh(gameTime).withAffectionReward(CatCareStats.TREAT_AFFECTION);
             CatCare.set(cat, stats);
             CatCare.sendStatus(player, cat, stats);
         } else {

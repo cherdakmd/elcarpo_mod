@@ -51,6 +51,7 @@ public final class CatCare {
                 name + " — сытость " + stats.hunger() + "/100, настроение "
                         + stats.happiness() + "/100, ухоженность " + stats.cleanliness() + "/100"
         ));
+        player.sendSystemMessage(Component.translatable("message.karas_cats.affection", stats.affection()));
     }
 
     private static void updateTamedCats(ServerLevel level) {
