@@ -123,7 +123,8 @@ jobs:
           script: |
             const fs = require('fs');
             const path = `${process.env.RUNNER_TEMP}/gradle.log`;
-            const log = fs.existsSync(path) ? fs.readFileSync(path, 'utf8').slice(-50000) : 'Gradle did not start; see the workflow job.';
+            const fullLog = fs.existsSync(path) ? fs.readFileSync(path, 'utf8') : 'Gradle did not start; see the workflow job.';
+            const log = fullLog.length > 50000 ? fullLog.slice(0, 20000) + '\n... middle of log omitted ...\n' + fullLog.slice(-29000) : fullLog;
             await github.rest.checks.create({
               owner: context.repo.owner,
               repo: context.repo.repo,

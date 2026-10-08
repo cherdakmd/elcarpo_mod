@@ -25,13 +25,13 @@ import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.resources.Resource;
 import net.minecraft.util.StrictJsonParser;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.DefaultAttributes;
-import net.minecraft.world.entity.animal.Cat;
+import net.minecraft.world.entity.animal.feline.Cat;
 import net.minecraft.world.entity.player.Player;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -53,7 +53,7 @@ public final class CatProfileManager {
 
     public static void initialize() {
         FabricDefaultAttributeRegistry.MODIFY.register(context -> context.modify(
-                EntityType.CAT,
+                EntityTypes.CAT,
                 (type, builder) -> {
                     AttributeSupplier existing = DefaultAttributes.getSupplier(type);
                     if (!existing.hasAttribute(Attributes.ATTACK_DAMAGE)) {
