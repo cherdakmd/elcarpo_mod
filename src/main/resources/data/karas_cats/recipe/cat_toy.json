@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:string",
+    "minecraft:gray_wool",
+    "minecraft:feather"
+  ],
+  "result": {
+    "id": "karas_cats:cat_toy",
+    "count": 1
+  }
+}

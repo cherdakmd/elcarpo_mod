@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:gold_nugget",
+    "minecraft:salmon",
+    "minecraft:string"
+  ],
+  "result": {
+    "id": "karas_cats:karas_medallion",
+    "count": 1
+  }
+}

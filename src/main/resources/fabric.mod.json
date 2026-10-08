@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "karas_cats",
+  "version": "${version}",
+  "name": "Карась и коты",
+  "description": "Мод о коте Карасе, других кошках и заботе о питомцах в Minecraft.",
+  "authors": [
+    "Elcarpo"
+  ],
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "ru.elcarpo.karascats.KarasCatsMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

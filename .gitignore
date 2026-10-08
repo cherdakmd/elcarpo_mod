@@ -1,0 +1,29 @@
+# Gradle
+.gradle/
+build/
+out/
+__pycache__/
+*.py[cod]
+
+# Minecraft development runs
+run/
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.classpath
+.project
+
+# Java crash/profile files
+hs_err_*.log
+replay_*.log
+*.hprof
+*.jfr
+
+# OS
+.DS_Store
+Thumbs.db

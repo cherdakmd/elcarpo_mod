@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:cod",
+    "minecraft:salmon",
+    "minecraft:kelp"
+  ],
+  "result": {
+    "id": "karas_cats:karas_treat",
+    "count": 2
+  }
+}
