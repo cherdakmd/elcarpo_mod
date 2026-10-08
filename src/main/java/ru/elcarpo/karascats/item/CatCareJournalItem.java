@@ -9,6 +9,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import ru.elcarpo.karascats.care.CatCare;
 import ru.elcarpo.karascats.care.CatCareStats;
+import ru.elcarpo.karascats.profile.CatProfileManager;
 
 /** Shows the needs of the player's cat without consuming the journal. */
 public final class CatCareJournalItem extends Item {
@@ -25,6 +26,7 @@ public final class CatCareJournalItem extends Item {
         if (!cat.level().isClientSide()) {
             CatCareStats stats = CatCare.getCurrent(cat, cat.level().getGameTime());
             CatCare.sendStatus(player, cat, stats);
+            CatProfileManager.sendProfile(player, cat);
         }
         return InteractionResult.SUCCESS;
     }

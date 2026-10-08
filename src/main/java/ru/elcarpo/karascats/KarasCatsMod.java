@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.elcarpo.karascats.care.CatCare;
 import ru.elcarpo.karascats.item.ModItems;
+import ru.elcarpo.karascats.profile.CatProfileManager;
 
 public final class KarasCatsMod implements ModInitializer {
     public static final String MOD_ID = "karas_cats";
@@ -14,6 +15,7 @@ public final class KarasCatsMod implements ModInitializer {
     @Override
     public void onInitialize() {
         ModItems.initialize();
+        CatProfileManager.initialize();
         CatCare.initialize();
         LOGGER.info("Карась и его пушистые друзья готовы к мурчанию!");
     }
