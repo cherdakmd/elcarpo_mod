@@ -7,7 +7,7 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.animal.Cat;
+import net.minecraft.world.entity.animal.feline.Cat;
 import net.minecraft.world.entity.player.Player;
 import ru.elcarpo.karascats.KarasCatsMod;
 
@@ -51,6 +51,7 @@ public final class CatCare {
                 name + " — сытость " + stats.hunger() + "/100, настроение "
                         + stats.happiness() + "/100, ухоженность " + stats.cleanliness() + "/100"
         ));
+        player.sendSystemMessage(Component.translatable("message.karas_cats.affection", stats.affection()));
     }
 
     private static void updateTamedCats(ServerLevel level) {
