@@ -1,0 +1,9 @@
+{
+  "asset_id": "karas_cats:entity/cat/karas",
+  "baby_asset_id": "karas_cats:entity/cat/karas_baby",
+  "spawn_conditions": [
+    {
+      "priority": 0
+    }
+  ]
+}
